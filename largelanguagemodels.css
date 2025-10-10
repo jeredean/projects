@@ -47,6 +47,7 @@ p {
 	top: 0;
 	z-index: 1000;
 	transition: all var(--anim-duration-m) var(--anim-ease-standard);
+	clip-path: none;
 }
 
 .nav {
@@ -111,19 +112,6 @@ p {
     overflow: hidden;
 }
 
-.dean::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -60px;
-    height: 120px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-bottom-left-radius: 50% 100%;
-    border-bottom-right-radius: 50% 100%;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) inset;
-}
-
 .section h1 {
 	font-size: 3.5rem;
 	font-weight: 700;
@@ -139,6 +127,12 @@ p {
 	text-align: left;
 	opacity: 0.9;
 	animation: fadeInUp var(--anim-duration-l) var(--anim-ease-standard) 0.2s both;
+}
+
+.section p.intro {
+	color: white;
+	font-weight: 500;
+	text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 
 .cta-button {
@@ -200,7 +194,7 @@ p {
 }
 
 .llm-card {
-	background: white;
+	background: #f0f0f0;
 	border-radius: 24px;
 	padding: 2rem;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -288,7 +282,7 @@ p {
 }
 
 .impact-section {
-	background: linear-gradient(135deg, #f8f9ff, #e8f1ff);
+	background: linear-gradient(135deg, white, white);
 	padding: 80px 0;
 }
 
@@ -473,39 +467,39 @@ p {
 }
 
 
-#concepts {
-	background: linear-gradient(135deg, #f8f9ff, #e8f1ff);
-        
+.concepts-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 24px;
+	margin-top: 40px;
 }
 
-#concepts .container {
-    max-width: 1100px;
-}
-
-#concepts h2 {
-    margin-bottom: 2rem;
-}
-
-#concepts p {
-	background: #ffffff;
-	border: 1px solid #e5e7eb; 
-	border-left: none; 
+.concept-card {
+	background: white;
 	border-radius: 12px;
-	padding: 1rem 1.25rem;
-	margin: 0 0 1rem 0;
-	text-align: left;
-	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-	transition: box-shadow var(--anim-duration-xs) var(--anim-ease-standard);
-	font-size: 1rem;
+	padding: 28px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	transition: all 0.3s ease;
+	border: 1px solid rgba(102, 126, 234, 0.1);
 }
 
-#concepts p:hover {
-	transform: translateY(-8px) scale(1.02);
-	box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15);
+.concept-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+	border-color: rgba(102, 126, 234, 0.3);
 }
 
-#concepts p strong {
-    color: #2c3e50;
+.concept-title {
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: #667eea;
+	margin-bottom: 12px;
+}
+
+.concept-description {
+	line-height: 1.7;
+	color: #555;
+	font-size: 0.95rem;
 }
 
 #concepts p:last-child {

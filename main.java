@@ -5,16 +5,7 @@ public class Main {
         
         student stu = new student(1, "dean", "BIT", acc);
         stu.showstudentdetails();
-        
-        distributors dist = new distributors("Electronics", "Model 3b");
-        System.out.println("Distributor created: " + dist);
-        
-        suppliers supp = new suppliers(100, "Laptop");
-        System.out.println("Supplier created: " + supp);
-        
-        manufactures manu = new manufactures("Hardware", "Processor");
-        System.out.println("Manufacturer created: " + manu);
-        
+      
         models mod = new models(2025, "April");
         System.out.println("Year: " + mod.getYear());
         System.out.println("Month: " + mod.Month);
@@ -26,5 +17,8 @@ public class Main {
         packaging pack = new packaging(2025, "April", 42, "ABC", "100", 10);
         System.out.println("Price: " + pack.Price);
         System.out.println("Scale: " + pack.Scale);
+
+        drivers d = new drivers();
+        d.displaymethods();
     }
 }

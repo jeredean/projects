@@ -1,5 +1,3 @@
-package project;
-
 public class words extends meaning{
     String Polymorphism;
     String Inheritance;

@@ -1,5 +1,3 @@
-package project;
-
 public class meaning {
     String Defination;
     String Notes;

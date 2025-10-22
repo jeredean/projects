@@ -20,5 +20,17 @@ public class Main {
 
         drivers d = new drivers();
         d.displaymethods();
+
+        meaning polymorphism = new meaning(
+            "Polymorphism is the ability of an object to take on many forms. In Java, it refers to the ability of a single interface to be used for different underlying forms (data types).",
+            "Method overriding and overloading are examples."
+        );
+        meaning inheritance = new meaning(
+            "Inheritance is a mechanism in Java by which one class is allowed to inherit the features (fields and methods) of another class.",
+            "A subclass inherits methods and fields from its superclass."
+        );
+        polymorphism.describe();
+        inheritance.describe();
+
     }
 }
